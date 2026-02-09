@@ -25,6 +25,8 @@ jobs:
 
       - name: Install and build Next.js
         working-directory: planner-app
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
         run: |
           npm install
           npm run build
@@ -65,3 +67,4 @@ jobs:
           package: .
 
           
+
